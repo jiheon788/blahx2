@@ -1,21 +1,3 @@
-# blahx2
-익명 질문 서비스
+# BlahBlah
 
-## 주요 기능
-* 이벤트를 생성한 뒤 익명으로 질문을 등록합니다.
-* 이벤트 생성한 사용자는 이벤트를 마감할 수 있습니다.
-* 사용자는 등록된 질문에 좋아요를 클릭할 수 있습니다.
-  * 한번 좋아요 클릭한 뒤 2번 좋아요할 수 없습니다.
-* 익명 질문은 최대 300자까지만 지원합니다.
-
-## .env 파일 템플릿
-```
-publicApiKey=퍼블릭key
-projectId=프로젝트id
-FIREBASE_AUTH_HOST={프로젝트id}.firebaseapp.com
-privateKey=프라이빗key
-clientEmail=이메일
-PORT=3000
-HOST=localhost
-PROTOCOL=http
-```
+This is **an Anonymous Question Service project** that follows the [Inflearn Lecture: Front-end DOIT coding (Next.js, Typescript) that you learn while creating](https://www.inflearn.com/course/%EB%A7%8C%EB%93%A4%EB%A9%B4%EC%84%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C).
