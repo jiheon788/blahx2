@@ -10,14 +10,14 @@ export interface IAuthUser {
 
 interface IAuthUserContext {
   authUser: IAuthUser | null;
-  isloading: boolean;
+  isLoading: boolean;
   signInWithGoogle: () => void;
   signOut: () => void;
 }
 
 const AuthUserContext = createContext<IAuthUserContext>({
   authUser: null,
-  isloading: true,
+  isLoading: true,
   signInWithGoogle: async () => ({ user: null, credential: null }),
   signOut: () => {},
 });

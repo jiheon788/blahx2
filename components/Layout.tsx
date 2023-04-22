@@ -1,19 +1,21 @@
-import { Box } from '@chakra-ui/react';
+import { Box, BoxProps } from '@chakra-ui/react';
 import Head from 'next/head';
+import GNB from './GNB';
 
 interface ILayoutProps {
   title?: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ title = 'blahblah', children }: ILayoutProps) => {
+const Layout: React.FC<Props & BoxProps> = ({ title = 'blahblah', children, ...boxProps }: ILayoutProps) => {
   return (
-    <div>
+    <Box {...boxProps}>
       <Head>
         <title>{title}</title>
       </Head>
+      <GNB />
       {children}
-    </div>
+    </Box>
   );
 };
 
