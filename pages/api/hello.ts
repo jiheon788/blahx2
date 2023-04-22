@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import FirebaseAdmin from '@/models/firebase_admin';
+import FirebaseAdmin from '@/models/FirebaseAdmin';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(_: NextApiRequest, res: NextApiResponse) {
