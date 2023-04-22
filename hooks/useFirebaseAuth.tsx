@@ -10,9 +10,21 @@ const useFirebaseAuth = () => {
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
-      const res = await signInWithPopup(FirebaseClient.getInstance().Auth, provider);
-      if (res.user) {
-        console.info(res.user);
+      const signInResult = await signInWithPopup(FirebaseClient.getInstance().Auth, provider);
+      if (signInResult.user) {
+        const res = await fetch('/api/member.add', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            uid: signInResult.user.uid,
+            email: signInResult.user.email,
+            displayName: signInResult.user.displayName,
+            photoURL: signInResult.user.photoURL,
+          }),
+        });
+        const resData = res.json();
       }
     } catch (err) {
       console.error(err);

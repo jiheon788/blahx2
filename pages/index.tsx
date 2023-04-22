@@ -6,7 +6,6 @@ import { NextPage } from 'next';
 
 const IndexPage: NextPage = function () {
   const { signInWithGoogle, authUser } = useAuth();
-  console.info(authUser);
 
   return (
     <Layout minH="100vh" backgroundColor="gray.50">
